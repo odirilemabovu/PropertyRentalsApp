@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{438B1CE0-7DF1-4C05-B17D-5D6A2A540C3E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PropertyRentalsAppDB</RootNamespace>
+    <AssemblyName>PropertyRentalsAppDB</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdministrator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdministrator.Designer.cs">
+      <DependentUpon>frmAdministrator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgent.Designer.cs">
+      <DependentUpon>frmAgent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sign-in Page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sign-in Page.Designer.cs">
+      <DependentUpon>Sign-in Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThemeColor.cs" />
+    <Compile Include="ucProvince.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucProvince.Designer.cs">
+      <DependentUpon>ucProvince.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucAdmin.Designer.cs">
+      <DependentUpon>ucAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucAgency.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucAgency.Designer.cs">
+      <DependentUpon>ucAgency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucAgent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucAgent.Designer.cs">
+      <DependentUpon>ucAgent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucCity.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucCity.Designer.cs">
+      <DependentUpon>ucCity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucProperties.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucProperties.Designer.cs">
+      <DependentUpon>ucProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucPropertyAgent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucPropertyAgent.Designer.cs">
+      <DependentUpon>ucPropertyAgent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucPropertyType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucPropertyType.Designer.cs">
+      <DependentUpon>ucPropertyType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucRental.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucRental.Designer.cs">
+      <DependentUpon>ucRental.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucSurbub.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucSurbub.Designer.cs">
+      <DependentUpon>ucSurbub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucTenant.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucTenant.Designer.cs">
+      <DependentUpon>ucTenant.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdministrator.resx">
+      <DependentUpon>frmAdministrator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgent.resx">
+      <DependentUpon>frmAgent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Sign-in Page.resx">
+      <DependentUpon>Sign-in Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucProvince.resx">
+      <DependentUpon>ucProvince.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucAdmin.resx">
+      <DependentUpon>ucAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucAgency.resx">
+      <DependentUpon>ucAgency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucAgent.resx">
+      <DependentUpon>ucAgent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucCity.resx">
+      <DependentUpon>ucCity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucProperties.resx">
+      <DependentUpon>ucProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucPropertyAgent.resx">
+      <DependentUpon>ucPropertyAgent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucPropertyType.resx">
+      <DependentUpon>ucPropertyType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucRental.resx">
+      <DependentUpon>ucRental.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucSurbub.resx">
+      <DependentUpon>ucSurbub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucTenant.resx">
+      <DependentUpon>ucTenant.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PropertyRentals_Pic.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{caf8ce27-83d0-4a1a-b017-39ad02bcc4b3}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{9216b184-6577-4481-ab77-55ccb2ac18df}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

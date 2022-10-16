@@ -568,20 +568,43 @@ namespace DAL
             return x;
 
         }
-        public DataTable SignIn(string email,string password )
+
+        public DataTable SignIn(string Email, string Password)
         {
-            dbConn.Open();
-            string sql = "sp_SignIn";
-            dbComm = new SqlCommand(sql, dbConn);
+            try
+            {
+                dbConn.Open();
+            }
+            catch
+            {
+
+            }
+            dbComm = new SqlCommand("sp_UserLogin", dbConn);
+            dbComm.Parameters.AddWithValue("@Email", Email);
+            dbComm.Parameters.AddWithValue("@Password", Password);
             dbComm.CommandType = CommandType.StoredProcedure;
-            dbComm.Parameters.AddWithValue("@Email",email);
-            dbComm.Parameters.AddWithValue("@Password", password);
-            dbAdapter = new SqlDataAdapter(dbComm);
+
             dt = new DataTable();
+            dbAdapter = new SqlDataAdapter(dbComm);
+
             dbAdapter.Fill(dt);
-            dbConn.Close();
             return dt;
         }
+
+        //public DataTable SignIn(string email,string password )
+        //{
+        //    dbConn.Open();
+        //    string sql = "sp_SignIn";
+        //    dbComm = new SqlCommand(sql, dbConn);
+        //    dbComm.CommandType = CommandType.StoredProcedure;
+        //    dbComm.Parameters.AddWithValue("@Email",email);
+        //    dbComm.Parameters.AddWithValue("@Password", password);
+        //    dbAdapter = new SqlDataAdapter(dbComm);
+        //    dt = new DataTable();
+        //    dbAdapter.Fill(dt);
+        //    dbConn.Close();
+        //    return dt;
+        //}
         //public DataTable SignIn(User user)
         //{
         //    dbConn.Open();

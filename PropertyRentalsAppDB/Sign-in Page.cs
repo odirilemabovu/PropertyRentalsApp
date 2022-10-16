@@ -16,26 +16,27 @@ namespace PropertyRentalsAppDB
         private void btnSignIn_Click(object sender, EventArgs e)
         {
             DataTable dt = bll.SignIn(txtUserName.Text, txtPassword.Text);
-            string role = dt.Rows[0]["RoleDescription"].ToString();
-            string user = dt.Rows[0]["Email"].ToString();
-            string password = dt.Rows[0]["Password"].ToString();
+            int roleid = int.Parse(dt.Rows[0]["RoleID"].ToString());
+            //string role = dt.Rows[0]["RoleDescription"].ToString();
+            //string user = dt.Rows[0]["Email"].ToString();
+            //string password = dt.Rows[0]["Password"].ToString();
 
 
             if (dt.Rows.Count > 0)
             {
-                if (role == "Admin" && txtPassword.Text == password && txtUserName.Text == user)
+                if (roleid == 1/* && txtPassword.Text == password && txtUserName.Text == user*/)
                 {
                     frmAdministrator form = new frmAdministrator();
                     form.Show();
                     this.Hide();
                 }
-                else if (role == "Agent"/* && txtPassword.Text == password && txtUserName.Text == user*/)
+                else if (roleid == 3 /*"Agent" && txtPassword.Text == password && txtUserName.Text == user*/)
                 {
                     frmAgent form = new frmAgent();
                     form.Show();
                     this.Hide();
                 }
-                else if (role == "Tenant"/* && txtPassword.Text == password && txtUserName.Text == user*/)
+                else if (roleid == 2 /*"Tenant" && txtPassword.Text == password && txtUserName.Text == user*/)
                 {
                     frmTenant form = new frmTenant();
                     form.Show();
